@@ -1,4 +1,6 @@
 # ZWTMusicPlayer
+![image](https://github.com/liunianhuaguoyanxi/ZWTMusicPlayer/blob/master/Pic/playOnTheBackground.PNG)
+![image](https://github.com/liunianhuaguoyanxi/ZWTMusicPlayer/blob/master/Pic/playTheMusie.PNG)
 ## ESTMusicPlayer 是基于 DOUAudioStreamer 开发的一款优雅简洁的音乐播放器.
 
 ## ZWTMusicPlayer 是基于ESTMusicPlayer的基础上的重构，它移除了ESTMusicPlayer中老旧的远程控制事件的实现方式：
