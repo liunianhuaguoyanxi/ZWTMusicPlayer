@@ -741,19 +741,7 @@ static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
     
     return _musicEntities[_currentIndex];
 }
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // 在App启动后开启远程控制事件, 接收来自锁屏界面和上拉菜单的控制
-    [application beginReceivingRemoteControlEvents];
-    
-    return YES;
-}
-
-- (void)applicationWillTerminate:(UIApplication *)application
-{
-    // 在App要终止前结束接收远程控制事件, 也可以在需要终止时调用该方法终止
-    [application endReceivingRemoteControlEvents];
-}
-
+c
 
 
 @end
