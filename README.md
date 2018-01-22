@@ -1,5 +1,7 @@
 # ZWTMusicPlayer
+## 锁屏状态
 ![image](https://github.com/liunianhuaguoyanxi/ZWTMusicPlayer/blob/master/Pic/playOnTheBackground.PNG)
+## 非锁屏状态
 ![image](https://github.com/liunianhuaguoyanxi/ZWTMusicPlayer/blob/master/Pic/playTheMusie.PNG)
 ## ESTMusicPlayer 是基于 DOUAudioStreamer 开发的一款优雅简洁的音乐播放器.
 
