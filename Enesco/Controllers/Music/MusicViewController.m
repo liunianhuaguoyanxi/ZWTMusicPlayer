@@ -326,6 +326,11 @@ static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
 
 - (IBAction)didTouchMenuButton:(id)sender {
     _dontReloadMusic = YES;
+    __weak typeof(self) weakSelf = self;
+    [self.navigationController dismissViewControllerAnimated:YES completion:^{
+        weakSelf.dontReloadMusic = NO;
+        weakSelf.lastMusicUrl = [weakSelf currentPlayingMusic].musicUrl.mutableCopy;
+    }];
 }
 
 - (IBAction)didTouchDismissButton:(id)sender {
