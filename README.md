@@ -6,7 +6,7 @@
 ## ESTMusicPlayer 是基于 DOUAudioStreamer 开发的一款开源，评分不错的音乐播放器.
 
 ## ZWTMusicPlayer 是基于ESTMusicPlayer的基础上的重构，它移除了ESTMusicPlayer中老旧的远程控制事件的实现方式：
-
+```
     - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
       在App启动后开启远程控制事件, 接收来自锁屏界面和上拉菜单的控制
@@ -70,7 +70,7 @@
             
         }
 
-
+```
 ### 因为iOS7.1后，MPRemoteCommandCenter类已经提供了处理远程控制事件的对象, 包括由外部附件和系统传输控制发送的远程控制事件. 不需要自己创建该类的实例. 
 ### 所以采取MPRemoteCommandCenter的共享对象来注册远程控制事件
 
