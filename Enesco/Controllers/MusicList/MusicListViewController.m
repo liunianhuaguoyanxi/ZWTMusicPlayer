@@ -92,6 +92,7 @@
         musicVC.musicEntities = _musicEntities;
         musicVC.specialIndex = indexPath.row;
         musicVC.delegate = self;
+        musicVC.dontReloadMusic = NO;
         [self presentToMusicViewWithMusicVC:musicVC];
     }
     [self showMiddleHint:@"loading"];

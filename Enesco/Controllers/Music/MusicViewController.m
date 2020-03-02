@@ -176,30 +176,32 @@ static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
         
     }
 }
--(void)pauseAction
+-(MPRemoteCommandHandlerStatus)pauseAction
 {
     NSLog(@"播放");
     [[MusicViewController sharedInstance].streamer pause];
+    return MPRemoteCommandHandlerStatusSuccess;
 }
--(void)playAction
+-(MPRemoteCommandHandlerStatus)playAction
 {
     [[MusicViewController sharedInstance].streamer play];
+    return MPRemoteCommandHandlerStatusSuccess;
 }
--(void)skipBackwardEvent
+-(MPRemoteCommandHandlerStatus)skipBackwardEvent
 {
     if (_streamer.status == DOUAudioStreamerFinished) {
         _streamer = nil;
         
         [self createStreamer];
-        
     }
     
     [_streamer setCurrentTime:[_streamer currentTime]-30];
     NSLog(@"%f [_streamer currentTime]-30",[_streamer currentTime]-30);
     [self updateProgressLabelValue];
     [self updateNowPlayingInfoCenterTime];
+    return MPRemoteCommandHandlerStatusSuccess;
 }
--(void)skipForwardEvent
+-(MPRemoteCommandHandlerStatus)skipForwardEvent
 {
     if (_streamer.status == DOUAudioStreamerFinished) {
         _streamer = nil;
@@ -211,6 +213,7 @@ static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
     [_streamer setCurrentTime:[_streamer currentTime]+30];
     [self updateProgressLabelValue];
     [self updateNowPlayingInfoCenterTime];
+    return MPRemoteCommandHandlerStatusSuccess;
 }
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
@@ -741,7 +744,19 @@ static void *kBufferingRatioKVOKey = &kBufferingRatioKVOKey;
     
     return _musicEntities[_currentIndex];
 }
-c
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // 在App启动后开启远程控制事件, 接收来自锁屏界面和上拉菜单的控制
+    [application beginReceivingRemoteControlEvents];
+    
+    return YES;
+}
+
+- (void)applicationWillTerminate:(UIApplication *)application
+{
+    // 在App要终止前结束接收远程控制事件, 也可以在需要终止时调用该方法终止
+    [application endReceivingRemoteControlEvents];
+}
+
 
 
 @end

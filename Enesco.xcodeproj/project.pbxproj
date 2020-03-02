@@ -478,7 +478,7 @@
 				TargetAttributes = {
 					5643E14A1C0C2AEA005D1A1C = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = 23XWURKSU9;
+						DevelopmentTeam = 9KBNV59EQ4;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -501,6 +501,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -753,7 +754,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: tao yu (76KYA9L8D2)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 23XWURKSU9;
+				DEVELOPMENT_TEAM = 9KBNV59EQ4;
 				GCC_PREFIX_HEADER = "Enesco/Enesco-Prefix.pch";
 				INFOPLIST_FILE = Enesco/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -772,7 +773,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: tao yu (76KYA9L8D2)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 23XWURKSU9;
+				DEVELOPMENT_TEAM = 9KBNV59EQ4;
 				GCC_PREFIX_HEADER = "Enesco/Enesco-Prefix.pch";
 				INFOPLIST_FILE = Enesco/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
